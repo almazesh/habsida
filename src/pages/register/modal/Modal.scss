@@ -1,0 +1,30 @@
+
+.modal{
+  width: 350px;
+  position: absolute;
+  left: 40%;
+  border-radius: 10px !important;
+  border:0 !important;
+  top: 20%;
+
+  .modal-image{
+    background: #05B7BF !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    position: relative;
+    .btn-close{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 10px;
+    }
+  }
+  .modal-header{
+    border-bottom: 0 !important;
+  }
+  .modal-footer{
+    border-top: 0 !important;
+  }
+}
