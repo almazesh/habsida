@@ -1,0 +1,56 @@
+.preview_main{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  div{
+    position: absolute;
+    
+
+    p{
+      color: white;
+      margin-right: 80%;
+    }
+  }
+
+  .first_block{
+    top: 23%;
+    left:9%;
+    .left{
+      position: absolute;
+      left: 8%;
+    }
+  }
+
+  .second_block{
+    top: 18%;
+    left: 38%;
+    .midd{
+      position: absolute;
+      left: 20%;
+      top: 40%;
+    }
+  }
+
+  .third_block{
+    top: 23%;
+    right: -46%;
+  }
+
+  .four_block{
+    bottom: 0;
+    left: 62%;
+    p{
+      color: white;
+      margin-right: 60%;
+    }
+    .bottom{
+      position: absolute;
+      top: 50%;
+      left: -25%;
+    }
+  }
+}

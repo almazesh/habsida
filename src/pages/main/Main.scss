@@ -1,7 +1,13 @@
 
 
 .main_card{
-  
+  .btn_test{
+    border-color: #05B7BF !important;
+  }
+  .animateText{
+    transition: .5s;
+    transform: rotate(360deg);
+  }
   .lang_card{
     cursor: pointer;
     transition: .3s;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import korea from '../../assets/main/🇰🇷.png'
 import usa from '../../assets/main/🇺🇸.png'
 import './Main.scss'
@@ -23,8 +24,10 @@ const langData = [
 const Main = () => {
   const [themeCard , setThemeCard] = useState(1)
   const [route , setRoute] = useState('')
+  const navigate = useNavigate()
+  const [animateText , setAnimateText] = useState(false)
 
-  const getRoute = (route) => {
+  const changeThemeBtn = (route) => {
     if(themeCard !== langData.length){
       setThemeCard(themeCard + 1)
       setRoute(route)
@@ -33,19 +36,29 @@ const Main = () => {
       setRoute(route)
     }
   }
+
+  const handleStart = () => {
+    if(route){
+      navigate('/examination')
+    }else{
+      setAnimateText(true)
+    }
+  }
+
+  
+
   return (
     <section className='section'>
       <div className='col-12 col-sm-12 col-md-12 col-xl-12'>
         <div className='card main_card p-5 text-center'>
-          <h4>Choose language</h4>
+          <h4 className={animateText && 'animateText' }>Choose language</h4>
 
           <div className='row justify-content-center mt-5'>
             {
               langData.map((item) => (
                 <div key={item.country} className='col-12 col-sm-12 col-md-6 col-xl-4'>
                   <div  onClick={() => {
-                    getRoute(item.route)
-                    // changeThemeBtn()
+                    changeThemeBtn(item.route)
                   }} className={route === item.route ? 'card dark text-light  lang_card  p-5 d-flex justify-content-center align-items-center flex-column' : 'card  lang_card  p-5 d-flex justify-content-center align-items-center flex-column'}>
                       <img src={item.img} className='flag mb-3'/>
                       <h3>
@@ -59,7 +72,7 @@ const Main = () => {
           </div>
           <div className='mt-5 d-flex  justify-content-center pb-5'> 
             <div className='col-xl-4'>
-              <button className='btn btn-primary p-3 w-100'>
+              <button onClick={handleStart} className='btn btn-primary p-3 w-100 btn_test'>
                 Start Test
               </button>
             </div>

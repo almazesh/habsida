@@ -3,6 +3,7 @@ import Create from '../pages/create/Create';
 import SignIn from '../pages/signin/SignIn';
 import Reset from '../pages/reset/Reset';
 import Main from '../pages/main/Main';
+import Exam from '../pages/examination/Exam';
 
 
 export const Routeauth = [
@@ -38,6 +39,12 @@ export const RoutePage = [
   {
     path:'/',
     element:Main,
+    exact:true,
+    auth:true,
+  },
+  {
+    path:'/examination',
+    element:Exam,
     exact:true,
     auth:true,
   },

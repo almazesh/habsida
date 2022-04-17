@@ -1,0 +1,43 @@
+.player_card{
+  height: 300px;
+  .card_circle{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border:1px solid #05B7BF;
+    color: #05B7BF;
+    display: flex;
+    top: -8.5%;
+    background: white;
+    justify-content: center;
+    left: 42%;
+    align-items: center;
+    h1{
+      font-weight: bolder;
+      margin: 0;
+      font-size: 24px;
+    }
+    
+  }
+  
+  .card-header{
+    h6{
+      margin: 0 !important;
+      margin-top: 35px !important;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #818181;
+    }
+    p{
+      margin: 0 40px;
+      color: #818181;
+    }
+  }
+  
+  .player_card-header{
+    height: 180px;
+  }
+}
+
